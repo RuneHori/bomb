@@ -8,7 +8,8 @@ public class SceneChangeScript : MonoBehaviour
     AudioSource audioSource;
     public AudioClip LetsStartSE;
     public AudioClip QuitSE;
-   
+    private float count = 0.0f;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -16,6 +17,7 @@ public class SceneChangeScript : MonoBehaviour
 
     private void Update()
     {
+       
         if (Input.GetKeyDown(KeyCode.Escape))//もしエスケープキーを押したら
         {
             QuitButtonDown();
@@ -24,6 +26,13 @@ public class SceneChangeScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return)) //もしエンターキーを押したら
         {
             StartButtonDown();
+        }
+
+        //10秒後にチュートリアルに遷移
+        count += Time.deltaTime;
+        if (count > 10.0f)
+        {
+            TutorialStart();
         }
     }
 
@@ -41,6 +50,10 @@ public class SceneChangeScript : MonoBehaviour
     private void GameStart()
     {
         SceneManager.LoadScene("GameScene");
+    }
+    private void TutorialStart()
+    {
+        SceneManager.LoadScene("TutorialScene");
     }
 
     //ゲーム終了
