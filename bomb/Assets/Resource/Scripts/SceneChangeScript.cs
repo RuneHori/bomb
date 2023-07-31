@@ -5,30 +5,46 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeScript : MonoBehaviour
 {
-    void Update()
+    AudioSource audioSource;
+    public AudioClip LetsStartSE;
+    public AudioClip QuitSE;
+   
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))//もしエスケープキーを押したら
         {
-            AppQuit();
+            QuitButtonDown();
         }
 
         if (Input.GetKeyDown(KeyCode.Return)) //もしエンターキーを押したら
         {
             StartButtonDown();
         }
-
     }
+
     public void StartButtonDown()
     {
-        Invoke("GameStart", 1.0f);
+        audioSource.PlayOneShot(LetsStartSE);
+        Invoke("GameStart", 1.5f);
     }
+    public void QuitButtonDown()
+    {
+        audioSource.PlayOneShot(QuitSE);
+        Invoke("AppQuit", 1.5f);
+    }
+
     private void GameStart()
     {
         SceneManager.LoadScene("GameScene");
     }
 
     //ゲーム終了
-    public void AppQuit() 
+    public void AppQuit()
     {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
