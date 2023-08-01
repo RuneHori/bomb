@@ -17,7 +17,6 @@ public class SceneChangeScript : MonoBehaviour
 
     private void Update()
     {
-       
         if (Input.GetKeyDown(KeyCode.Escape))//もしエスケープキーを押したら
         {
             QuitButtonDown();
@@ -28,7 +27,7 @@ public class SceneChangeScript : MonoBehaviour
             StartButtonDown();
         }
 
-        //10秒後にチュートリアルに遷移
+        //10秒後にチュートリアルシーンに遷移
         count += Time.deltaTime;
         if (count > 10.0f)
         {
