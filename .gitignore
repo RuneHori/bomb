@@ -79,5 +79,11 @@ bomb/Temp/FSTimeGet-3c8251d0db3373c43baf9b1de9ebd41c
 bomb/Temp/FSTimeGet-2b8d788712289da49abaff49664cf159
 bomb/Temp/FSTimeGet-3b56dfad1ff210346a1f2ba30a78b7d3
 bomb/Temp/FSTimeGet-3c8251d0db3373c43baf9b1de9ebd41c
+bomb/Library/PackageCache/com.unity.burst@1.8.3/.Runtime/burst-llvm-14.dll
+bomb/Library/PackageCache/com.unity.burst@1.8.3/.Runtime/hostmac/dsymutil
+bomb/Library/PackageCache/com.unity.burst@1.8.3/.Runtime/burst-llvm-14.dll
+bomb/Library/PackageCache/com.unity.burst@1.8.3/.Runtime/libburst-llvm-10.dylib
+bomb/Library/PackageCache/com.unity.burst@1.8.3/.Runtime/libburst-llvm-14.so
+bomb/Library/PackageCache/com.unity.burst@1.8.3/.Runtime/libburst-llvm-14.dylib
 bomb/Temp/UnityLockfile
 >>>>>>> af36acdd58a64f25fc6b808a72738d54903640b5
