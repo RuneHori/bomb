@@ -9,11 +9,11 @@ C:\Program Files\Unity 2022.2.9f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker0
+AssetImportWorker3
 -projectPath
 D:/22ci0436/bomb/bomb
 -logFile
-Logs/AssetImportWorker0.log
+Logs/AssetImportWorker3.log
 -srvPort
 61797
 Successfully changed project path to: D:/22ci0436/bomb/bomb
@@ -47,11 +47,11 @@ D:/22ci0436/bomb/bomb
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [12252] Host "[IP] 10.74.81.33 [Port] 0 [Flags] 2 [Guid] 3161624114 [EditorId] 3161624114 [Version] 1048832 [Id] WindowsEditor(7,R422-C05) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [17916] Host "[IP] 10.74.81.33 [Port] 0 [Flags] 2 [Guid] 3222214104 [EditorId] 3222214104 [Version] 1048832 [Id] WindowsEditor(7,R422-C05) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [12252] Host "[IP] 10.74.81.33 [Port] 0 [Flags] 2 [Guid] 3161624114 [EditorId] 3161624114 [Version] 1048832 [Id] WindowsEditor(7,R422-C05) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [17916] Host "[IP] 10.74.81.33 [Port] 0 [Flags] 2 [Guid] 3222214104 [EditorId] 3222214104 [Version] 1048832 [Id] WindowsEditor(7,R422-C05) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 3.67 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3.00 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.2.9f1 (1cc571a6ec95)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2022.2.9f1/Editor/Data/Resources/UnitySubsystems
@@ -67,43 +67,43 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2022.2.9f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2022.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity 2022.2.9f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56496
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56112
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2022.2.9f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity 2022.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004850 seconds.
-- Loaded All Assemblies, in  0.294 seconds
+Registered in 0.004584 seconds.
+- Loaded All Assemblies, in  0.310 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.260 seconds
+- Finished resetting the current domain, in  0.272 seconds
 Domain Reload Profiling:
-	ReloadAssembly (164ms)
-		BeginReloadAssembly (81ms)
+	ReloadAssembly (180ms)
+		BeginReloadAssembly (78ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (79ms)
+			LoadAssemblies (77ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (123ms)
+			SetupTypeCache (124ms)
 				TypeCache.Initialize (123ms)
-					TypeCache.ScanAssembly (121ms)
-				ResolveRequiredComponents (0ms)
+					TypeCache.ScanAssembly (122ms)
+				ResolveRequiredComponents (1ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (208ms)
+			SetupLoadedEditorAssemblies (215ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (56ms)
+				InitializePlatformSupportModulesInManaged (55ms)
 				SetLoadedEditorAssemblies (4ms)
 				RefreshPlugins (0ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (104ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
+				ProcessInitializeOnLoadAttributes (107ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -111,95 +111,95 @@ Domain Reload Profiling:
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Symbol file data-000001BE58F31C30 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-000001D4C2762310 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE58CA6010 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file data-000001D4E68CD0D0 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE58F31C30 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-000001D4E6450020 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE58CA6010 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file data-000001D4E68CD0D0 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE58CA6010 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file data-000001D4E68CD0D0 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE5A41E420 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file data-000001D4E6491430 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE5877FAE0 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file data-000001D4E64B0C40 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE587862F0 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file data-000001D4E64B0C40 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE58F52840 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file data-000001D4E64C1340 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE59C70010 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-000001D4E672F020 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE58866040 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file data-000001D4E64C1340 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.Settings.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE58CA6010 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file data-000001D4E64C1340 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE58F62850 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-000001D4E64C1340 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE346FED60 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-000001D4E6EED020 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE346FED60 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file data-000001D4E6EED020 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE59CDC990 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-000001D4E6F25A30 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE59CDC990 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-000001D4E6F3D840 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE34716B70 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file data-000001D4C2502020 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE58866040 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file data-000001D4E6F640C0 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE58866040 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-000001D4E6F6FED0 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE349509B0 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file data-000001D4E824D010 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001BE348C6350 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file data-000001D4E829E420 doesn't match image D:\22ci0436\bomb\bomb\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory doesn't match image D:\22ci0436\bomb\bomb\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\22ci0436\bomb\bomb\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.667 seconds
-Refreshing native plugins compatible for Editor in 1.08 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.669 seconds
+Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.462 seconds
+- Finished resetting the current domain, in  0.469 seconds
 Domain Reload Profiling:
-	ReloadAssembly (198ms)
-		BeginReloadAssembly (114ms)
+	ReloadAssembly (188ms)
+		BeginReloadAssembly (113ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		LoadAllAssembliesAndSetupDomain (468ms)
-			LoadAssemblies (234ms)
+			CreateAndSetChildDomain (23ms)
+		LoadAllAssembliesAndSetupDomain (480ms)
+			LoadAssemblies (242ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (290ms)
-				TypeCache.Initialize (274ms)
-					TypeCache.ScanAssembly (269ms)
-				ResolveRequiredComponents (4ms)
+			SetupTypeCache (291ms)
+				TypeCache.Initialize (273ms)
+					TypeCache.ScanAssembly (267ms)
+				ResolveRequiredComponents (3ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (313ms)
+			SetupLoadedEditorAssemblies (322ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (19ms)
-				SetLoadedEditorAssemblies (5ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (4ms)
 				RefreshPlugins (0ms)
 				BeforeProcessingInitializeOnLoad (48ms)
-				ProcessInitializeOnLoadAttributes (220ms)
+				ProcessInitializeOnLoadAttributes (233ms)
 				ProcessInitializeOnLoadMethodAttributes (17ms)
 				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.62 ms, found 3 plugins.
+			AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.64 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3147 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 34 unused Assets / (66.8 KB). Loaded Objects now: 3615.
-Memory consumption went from 491.3 MB to 491.2 MB.
-Total: 3.598200 ms (FindLiveObjects: 0.312700 ms CreateObjectMapping: 0.245100 ms MarkObjects: 2.848400 ms  DeleteObjects: 0.190800 ms)
+Memory consumption went from 491.2 MB to 491.2 MB.
+Total: 3.377200 ms (FindLiveObjects: 0.542200 ms CreateObjectMapping: 0.169300 ms MarkObjects: 2.555000 ms  DeleteObjects: 0.109400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -215,33 +215,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 11239.048365 seconds.
-  path: Assets/Resource/Word/QuitLogo.png
-  artifactKey: Guid(54704e3fe188c684f8dc0369b3adb5c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resource/Word/QuitLogo.png using Guid(54704e3fe188c684f8dc0369b3adb5c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58acd370fcb7fbbfae0bb249c138f00f') in 0.099816 seconds 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Resource/Word/Ready3.png
-  artifactKey: Guid(d0dc2cf71bdd26046badd149ac65e28d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resource/Word/Ready3.png using Guid(d0dc2cf71bdd26046badd149ac65e28d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c265b16c91642cabfbc70856e1742d25') in 0.021466 seconds 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Resource/Word/Ready2.png
-  artifactKey: Guid(81a466b42cbb60e4497e15fc2a6e29c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resource/Word/Ready2.png using Guid(81a466b42cbb60e4497e15fc2a6e29c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48846e60b7a55bfe60aacfa7bbf07cbd') in 0.019017 seconds 
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Resource/Word/TitleLogo.png
-  artifactKey: Guid(917f91f165231d5438b66f6e83197ecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resource/Word/TitleLogo.png using Guid(917f91f165231d5438b66f6e83197ecc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1a84a224873ea7b628de69db74900d0') in 0.018617 seconds 
+  Time since last request: 11239.109578 seconds.
+  path: Assets/Resource/Word/Ready1.png
+  artifactKey: Guid(95ad9a783f603ec44b32507e3f2dfeae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resource/Word/Ready1.png using Guid(95ad9a783f603ec44b32507e3f2dfeae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd004d5e4702af49833457eb476c09455') in 0.091680 seconds 
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
