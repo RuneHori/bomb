@@ -6,7 +6,8 @@ public class PlayerScript : MonoBehaviour
 {
     private bool canPlayGame = false;
     private Transform playerTransform;
-    public float movementSpeed = 5.0f; // 移動速度
+    public float movementSpeed = 15.0f; // 移動速度
+
     void Start()
     {
         playerTransform = GetComponent<Transform>();
@@ -17,15 +18,27 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         if (canPlayGame == true)
-        { // WASDキーと→キーの入力を取得
-            float horizontalInput = Input.GetAxis("Horizontal");
-            float verticalInput = Input.GetAxis("Vertical");
-
-            // 入力に基づいて移動ベクトルを作成
-            Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput) * movementSpeed * Time.deltaTime;
-
-            // 現在位置に移動ベクトルを加算して移動させる
-            playerTransform.Translate(movement);
+        {
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            {
+                playerTransform.localPosition += transform.forward * movementSpeed*Time.deltaTime;
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+            if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            {
+                playerTransform.localPosition += transform.forward * movementSpeed * Time.deltaTime;
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                playerTransform.localPosition += transform.forward * movementSpeed * Time.deltaTime;
+                transform.eulerAngles = new Vector3(0, -90, 0);
+            }
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                playerTransform.localPosition += transform.forward * movementSpeed * Time.deltaTime;
+                transform.eulerAngles = new Vector3(0, 90, 0);
+            }
         }
     }
 
