@@ -11,7 +11,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         playerTransform = GetComponent<Transform>();
-        Invoke("GameStart", .0f);
+        Invoke("GameStart", 3.0f);
     }
 
     // Update is called once per frame
