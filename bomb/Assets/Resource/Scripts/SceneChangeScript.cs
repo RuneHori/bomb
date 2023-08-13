@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneChangeScript : MonoBehaviour
 {
     AudioSource audioSource;
-    public AudioClip LetsStartSE;
-    public AudioClip QuitSE;
+    public AudioClip LetsStartSE;//start‚É–Â‚ç‚·
+    public AudioClip QuitSE;//GameI—¹‚É–Â‚ç‚·
     private float count = 0.0f;
 
     private void Start()
