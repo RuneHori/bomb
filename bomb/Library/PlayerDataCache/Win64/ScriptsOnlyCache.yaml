@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - PlayerScript
     - SceneChangeScript
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -13,10 +14,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -102,21 +101,67 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 74
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1594}
+    - Class: 114
+      Script: {instanceID: 2598}
+    - Class: 114
+      Script: {instanceID: 2800}
+    - Class: 114
+      Script: {instanceID: 5586}
+    - Class: 114
+      Script: {instanceID: 6058}
+    - Class: 114
+      Script: {instanceID: 6316}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
     Assets/Scenes/TitleScene.unity:
     - Class: 1
@@ -154,27 +199,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1594}
     - Class: 114
-      Script: {instanceID: 2172}
+      Script: {instanceID: 2176}
     - Class: 114
-      Script: {instanceID: 2584}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2786}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 3062}
+      Script: {instanceID: 3078}
     - Class: 114
-      Script: {instanceID: 3946}
+      Script: {instanceID: 3968}
     - Class: 114
-      Script: {instanceID: 4054}
+      Script: {instanceID: 4076}
     - Class: 114
-      Script: {instanceID: 4302}
+      Script: {instanceID: 4326}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 5040}
     - Class: 114
-      Script: {instanceID: 5546}
+      Script: {instanceID: 5586}
     - Class: 114
-      Script: {instanceID: 5964}
+      Script: {instanceID: 6014}
     - Class: 114
-      Script: {instanceID: 6006}
+      Script: {instanceID: 6058}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -985,6 +1030,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: b78a9036e97dd328479cf71df14f6237
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerScript
   - hash:
       serializedVersion: 2
       Hash: 098f025716fad3521c89a222b6058556
