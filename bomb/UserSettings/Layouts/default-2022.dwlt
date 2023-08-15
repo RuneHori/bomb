@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 725.60004
     height: 428
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 12}
@@ -752,9 +752,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2ec90000
-      m_LastClickedID: 51502
-      m_ExpandedIDs: c0abfeff12adfeff0cb7feff1cd3feff6ed4feff24dffeffb6e6feff08e8feffaef1feff00f3feffc2fffeffc807ffffc211ffff1413fffffc13ffff181cffff6a1dffff6e27ffffc028ffff9e2affff4835ffff4a35ffff843bffffd43effff883fffff6a40ffff064bffff584cffffb456ffff045affff065affffb87cffffba7cffffaa7dffffda85ffff2c87ffffb490ffffb690ffffa091ffff10a2ffff12a2ffff92abffff94abffff7aacffffa6b8ffffa8b8ffff5cc2ffffaec3ffff8accffffdccdffff40d1ffff22e1ffff74e2ffff9cecfffff4fffffffc720000cc840000fe8d0000b68e0000d28e00000a8f0000bc9800000c9900007ab30000cab30000ccb4000086b70000a0b70000d8b70000f2b7000040c200005cc2000094c2000034c300004cc4000068c400007ec40000a4c40000c0c4000002c600001cc6000018c8000048c8000070c8000076ca000090ca0000a6ca000086cc000036cd000050cd0000
+      m_SelectedIDs: ae180000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 20fbfffff8590000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1166,23 +1166,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Resource/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 82
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Resource/Scripts
   m_LastFoldersGridSize: 82
   m_LastProjectPath: "C:\\Users\\81804\\OneDrive\\\u30C7\u30B9\u30AF\u30C8\u30C3\u30D7\\bomb\\bomb"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ec690000
-    m_LastClickedID: 27116
-    m_ExpandedIDs: 00000000e0690000ea69000000ca9a3bffffff7f
+    m_SelectedIDs: fe710000
+    m_LastClickedID: 29182
+    m_ExpandedIDs: 00000000fe5e0000085f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1210,7 +1210,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e0690000
+    m_ExpandedIDs: 00000000fe5e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
