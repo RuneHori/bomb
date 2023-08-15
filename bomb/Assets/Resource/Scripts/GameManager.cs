@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameObject[] ObstacleWallPrefab;
-
     private void Awake()
     {
         if (instance == null)
@@ -18,6 +17,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
    
     // Update is called once per frame
