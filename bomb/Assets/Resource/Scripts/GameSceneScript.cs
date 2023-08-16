@@ -15,4 +15,22 @@ public class GameSceneScript : MonoBehaviour
         wall = gameManager.ObstacleWallPrefab[random];
         Instantiate(wall, parent);
     }
+    private void Update()
+    {
+        //ˆêŽž’âŽ~
+        if (Input.GetKey(KeyCode.Q))
+        {
+            PauseGame();
+        }
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
 }
