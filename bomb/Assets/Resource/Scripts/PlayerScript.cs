@@ -12,12 +12,12 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         playerTransform = GetComponent<Transform>();
-        Invoke("GameStart", 3.0f);
+        Invoke("StartGame", 3.0f);
     }
 
-    // Update is called once per frame
     void Update()
     {
+
         if (canPlayGame == true)
         {
             //移動
@@ -25,6 +25,7 @@ public class PlayerScript : MonoBehaviour
             if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) MovePlayer(180f);
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) MovePlayer(-90f);
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) MovePlayer(90f);
+            
             //ボム発動
             if(Input.GetKey(KeyCode.Z))
             {
@@ -37,9 +38,9 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    private void GameStart()
+    private void StartGame()
     {
-        canPlayGame = true;
+        canPlayGame = true;//行動（移動）可能
     }
 
     private void MovePlayer(float direction)
@@ -47,4 +48,7 @@ public class PlayerScript : MonoBehaviour
         playerTransform.localPosition += transform.forward * movementSpeed * Time.deltaTime;
         transform.eulerAngles = new Vector3(0.0f, direction, 0.0f);
     }
+
+   
+    
 }
