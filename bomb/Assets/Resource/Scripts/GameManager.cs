@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public GameObject[] ObstacleWallPrefab;
+    public GameObject[] ObstacleWallPrefab;//ステージの障害壁
+
     private void Awake()
     {
         if (instance == null)
@@ -19,15 +20,16 @@ public class GameManager : MonoBehaviour
         }
 
     }
-   
-    // Update is called once per frame
+
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))//もしエスケープキーを押したら
         {
-            Invoke("AppQuit", 1.5f);
+            Invoke("AppQuit", 1.5f);//1.5秒後にゲーム終了
         }
     }
+
 
     //ゲーム終了
     public void AppQuit()

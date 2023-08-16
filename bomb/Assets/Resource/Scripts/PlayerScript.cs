@@ -15,7 +15,6 @@ public class PlayerScript : MonoBehaviour
         Invoke("StartGame", 3.0f);
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -41,7 +40,7 @@ public class PlayerScript : MonoBehaviour
 
     private void StartGame()
     {
-        canPlayGame = true;
+        canPlayGame = true;//行動（移動）可能
     }
 
     private void MovePlayer(float direction)
