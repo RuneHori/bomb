@@ -11,15 +11,20 @@ public class GameSceneScript : MonoBehaviour
     public Transform parent; //生成場所指定
     public GameObject wall;//障害壁ランダム格納変数
 
+
     //ポーズした際に表示するPrefab
-    [SerializeField] private GameObject resumeButton;
+    [SerializeField] private Button resumeButton;
+
 
     private void Start()
     {
+        //ランダムにステージの壁作成
         int random = UnityEngine.Random.Range(0, 3);
         wall = gameManager.ObstacleWallPrefab[random];
         Instantiate(wall, parent);
-        resumeButton.SetActive(false);
+
+        //ボタン
+        resumeButton.gameObject.SetActive(false);
     }
     private void Update()
     {
@@ -28,7 +33,7 @@ public class GameSceneScript : MonoBehaviour
         {
             PauseGame();
         }
-        if (resumeButton == true && Input.GetKey(KeyCode.R))
+        if (resumeButton.gameObject.activeSelf && Input.GetKey(KeyCode.R))
         {
             ResumeGame();
         }
@@ -37,12 +42,12 @@ public class GameSceneScript : MonoBehaviour
     public void PauseGame()//一時停止
     {
         Time.timeScale = 0f;
-        resumeButton.SetActive(true);
+        resumeButton.gameObject.SetActive(true);
     }
 
     public void ResumeGame()//ゲーム再開
     {
-        resumeButton.SetActive(false);
+        resumeButton.gameObject.SetActive(false);
         Time.timeScale = 1f;
     }
 }
