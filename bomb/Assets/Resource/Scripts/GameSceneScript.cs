@@ -12,8 +12,17 @@ public class GameSceneScript : MonoBehaviour
     public GameObject wall;//障害壁ランダム格納変数
 
 
-    //ポーズした際に表示するPrefab
+    //ボタン
+    //ゲーム一時停止ボタン
+    [SerializeField] private Button pauseButton;
+    //ゲーム再開するボタン
     [SerializeField] private Button resumeButton;
+    //ゲーム終了ボタン
+    [SerializeField] private Button quitButton;
+    //音量調整ボタン
+    [SerializeField] private Button soundButton;
+    //チュートリアル表示ボタン
+    [SerializeField] private Button tutorialButton;
 
 
     private void Start()
@@ -24,8 +33,13 @@ public class GameSceneScript : MonoBehaviour
         Instantiate(wall, parent);
 
         //ボタン
+        pauseButton.gameObject.SetActive(true);
         resumeButton.gameObject.SetActive(false);
+        quitButton.gameObject.SetActive(false);
+        soundButton.gameObject.SetActive(false);
+        tutorialButton.gameObject.SetActive(false);
     }
+
     private void Update()
     {
         //一時停止
@@ -33,6 +47,8 @@ public class GameSceneScript : MonoBehaviour
         {
             PauseGame();
         }
+
+        //ゲーム再開
         if (resumeButton.gameObject.activeSelf && Input.GetKey(KeyCode.R))
         {
             ResumeGame();
@@ -43,11 +59,30 @@ public class GameSceneScript : MonoBehaviour
     {
         Time.timeScale = 0f;
         resumeButton.gameObject.SetActive(true);
+        quitButton.gameObject.SetActive(true);
+        soundButton.gameObject.SetActive(true);
+        tutorialButton.gameObject.SetActive(true);
     }
 
     public void ResumeGame()//ゲーム再開
     {
         resumeButton.gameObject.SetActive(false);
         Time.timeScale = 1f;
+    }
+
+    public void QuitGame()
+    {
+
+    }
+
+
+    public void SoundGame()
+    {
+
+    }
+
+    public void TutorialGame()
+    {
+
     }
 }

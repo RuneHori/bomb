@@ -714,7 +714,6 @@ MonoBehaviour:
   - {fileID: 6153122862180792797, guid: f1877fbc22b73694a8de8ada4ae6d535, type: 3}
   - {fileID: 1815718018907336537, guid: 4f1cdec5bab049a41822cd0bb363d354, type: 3}
   - {fileID: 3173055732928770970, guid: 498ff010098decd4e877254eac58d989, type: 3}
-  WallObject: {fileID: 0}
 --- !u!4 &1007672135
 Transform:
   m_ObjectHideFlags: 0

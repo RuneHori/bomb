@@ -359,6 +359,7 @@
 "Assets/Resource/Scripts/GameSceneScript.cs"
 "Assets/Resource/Scripts/PlayerScript.cs"
 "Assets/Resource/Scripts/SceneChangeScript.cs"
+"Assets/Resource/Scripts/TutorialSceneScript.cs"
 "Assets/Resource/Word/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/Resource/Word/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/Resource/Word/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"
