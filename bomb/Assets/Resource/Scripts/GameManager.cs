@@ -30,6 +30,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //音量設定
+    private void SoundSetting()
+    {
+        //BGM設定
+        //SE設定
+    }
+
+    //振動オンオフ設定
+    private void Vibrationsetting()
+    {
+
+    }
 
     //ゲーム終了
     public void AppQuit()
