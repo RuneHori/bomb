@@ -890,6 +890,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 741920863}
+    - target: {fileID: 2102009792316950793, guid: c9e1fb8f949f4be48876a9e97b4eba97, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitButtonDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 2102009792316950793, guid: c9e1fb8f949f4be48876a9e97b4eba97, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneChangeScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5194893193825021240, guid: c9e1fb8f949f4be48876a9e97b4eba97, type: 3}
       propertyPath: m_Name
       value: QuitButton
