@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeScript : MonoBehaviour
 {
+    GameManager gameManager;
     AudioSource audioSource;
     public AudioClip LetsStartSE;　//スタートボタンが押された際に鳴らす
     public AudioClip QuitSE;　//Quitボタンが押された際に鳴らす
@@ -12,6 +13,7 @@ public class SceneChangeScript : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameManager.instance;
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -46,7 +48,7 @@ public class SceneChangeScript : MonoBehaviour
     public void QuitButtonDown()
     {
         audioSource.PlayOneShot(QuitSE);
-        Invoke("AppQuit", 1.5f);
+        gameManager.Invoke("AppQuit", 1.5f);
     }
 
     //ゲームシーンに遷移
@@ -59,15 +61,5 @@ public class SceneChangeScript : MonoBehaviour
     private void TutorialStart()
     {
         SceneManager.LoadScene("TutorialScene");
-    }
-
-    //ゲーム終了
-    public void AppQuit()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-    Application.Quit();　
-#endif
     }
 }
