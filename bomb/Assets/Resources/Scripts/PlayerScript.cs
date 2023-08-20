@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+
     private bool canPlayGame = false;
     private Transform playerTransform;
     public float movementSpeed = 15.0f; // ˆÚ“®‘¬“x

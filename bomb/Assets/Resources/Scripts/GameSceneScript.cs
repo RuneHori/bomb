@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class GameSceneScript : MonoBehaviour
 {
     GameManager gameManager = GameManager.instance;
-  
+
     public Transform parent; //生成場所指定
     public GameObject wall;//障害壁ランダム格納変数
 
@@ -18,8 +18,6 @@ public class GameSceneScript : MonoBehaviour
     [SerializeField] private GameObject settingPanel;
     //チュートリアル（アイテム等説明）ボタンを押した際に発現するパネル
     [SerializeField] private GameObject tutorialPanel;
-    //音量調整（Sound）ボタンを押した際に発現するパネル
-    [SerializeField] private GameObject soundPanel;
 
 
     //ボタン
@@ -43,6 +41,8 @@ public class GameSceneScript : MonoBehaviour
 
     private void Start()
     {
+        //ゲームスタートカウントダウンSE
+        gameManager.SoundSE("CountDownSE");
         //ランダムにステージの壁作成
         int random = UnityEngine.Random.Range(0, 3);
         wall = gameManager.ObstacleWallPrefab[random];
@@ -52,12 +52,11 @@ public class GameSceneScript : MonoBehaviour
         pausePanel.SetActive(false);
         settingPanel.SetActive(false);
         tutorialPanel.SetActive(false);
-        soundPanel.SetActive(false);
 
         //ボタン
         //TRUE（表示）
-        pauseButton.gameObject.SetActive(false);
-        Invoke("ShowButtonWithDelay", 3.0f);//ゲームスタートから３秒後にPauseボタンを表示
+        pauseButton.gameObject.SetActive(false);//最初（カウントダウンが終わるまで）ポーズボタン非表示
+        Invoke("ShowButtonWithDelay", 3.0f);//ゲームスタートから３秒後にポーズボタンを表示する関数に移行
 
         //FALSE（非表示）
         resumeButton.gameObject.SetActive(false);
@@ -72,102 +71,141 @@ public class GameSceneScript : MonoBehaviour
     private void Update()
     {
         //一時停止
+        //ポーズボタンが表示されている　かつ　Qキーが押された場合
         if (pauseButton.gameObject.activeSelf && Input.GetKey(KeyCode.Q))
         {
             PauseButtonDown();
         }
 
         //ゲーム再開
+        //ゲーム再開ボタンが表示されている　かつ　Rキーが押された場合
         if (resumeButton.gameObject.activeSelf && Input.GetKey(KeyCode.R))
         {
             ResumeButtonDown();
         }
     }
-    
-    private void ShowButtonWithDelay()
+
+    private void ShowButtonWithDelay()//３秒後Pause画面出現
     {
         pauseButton.gameObject.SetActive(true);
     }
+
     public void PauseButtonDown()//一時停止
     {
-       // if (canPlayPause == true)
-        {
-            Time.timeScale = 0f;
+        gameManager.SoundSE("ButtonDownSE");//効果音
 
-            pauseButton.gameObject.SetActive(false);
-            pausePanel.SetActive(true);
+        //一時停止
+        Time.timeScale = 0f;
 
-            resumeButton.gameObject.SetActive(true);
-            quitButton.gameObject.SetActive(true);
-            settingButton.gameObject.SetActive(true);
-            tutorialButton.gameObject.SetActive(true);
-        }
+        //ポーズについて
+        pauseButton.gameObject.SetActive(false);
+        pausePanel.SetActive(true);
+
+        //ボタン・true（表示）
+        resumeButton.gameObject.SetActive(true);
+        quitButton.gameObject.SetActive(true);
+        settingButton.gameObject.SetActive(true);
+        tutorialButton.gameObject.SetActive(true);
+
     }
 
     public void ResumeButtonDown()//ゲーム再開
     {
+        gameManager.SoundSE("ButtonDownSE"); //効果音
+
+        //ポーズについて
         pauseButton.gameObject.SetActive(true);
         pausePanel.SetActive(false);
 
+        //ボタン・false（非表示）
         resumeButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
         settingButton.gameObject.SetActive(false);
         tutorialButton.gameObject.SetActive(false);
+
+        //一時停止解除
         Time.timeScale = 1f;
     }
 
     public void QuitButtonDown()//ゲーム終了
     {
-        gameManager.AppQuit();
+        gameManager.SoundSE("QuitSE");//効果音
+
+        Time.timeScale = 1f;//一時停止解除
+
+        gameManager.Invoke("AppQuit", 1.0f);//1.0秒後にゲーム終了関数（AppQuit）に移行
     }
 
 
-    public void SettingButtonDown()
+    public void SettingButtonDown()//設定ボタンを押した際
     {
-        //パネル
+        gameManager.SoundSE("ButtonDownSE"); //効果音
+
+        //パネルについて
         pausePanel.SetActive(false);
         settingPanel.SetActive(true);
 
         //ボタン
-        // pauseButton.gameObject.SetActive(true);
+        //true（表示）
         backButton.gameObject.SetActive(true);
         vibrationButton.gameObject.SetActive(true);
         soundButton.gameObject.SetActive(true);
 
+        //false（非表示）
         resumeButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
-        settingButton.gameObject.SetActive(true);
-        // vibrationButton.gameObject.SetActive(false);
         settingButton.gameObject.SetActive(false);
         tutorialButton.gameObject.SetActive(false);
     }
 
-    public void TutorialButtonDown()
+    public void TutorialButtonDown()//チュートリアルボタンを押した際
     {
+        gameManager.SoundSE("ButtonDownSE"); //効果音
 
-    }
-
-    public void BackButtonDown()
-    {
-        pausePanel.SetActive(true);
+        //パネルについて
+        tutorialPanel.SetActive(true);
+        pausePanel.SetActive(false);
         settingPanel.SetActive(false);
 
-        backButton.gameObject.SetActive(false);
-        vibrationButton.gameObject.SetActive(false);
-        soundButton.gameObject.SetActive(false);
+        //ボタン
+        //true（表示）
+        backButton.gameObject.SetActive(true);
 
+        //false（非表示）
+        resumeButton.gameObject.SetActive(false);
+        quitButton.gameObject.SetActive(false);
+        settingButton.gameObject.SetActive(false);
+        tutorialButton.gameObject.SetActive(false);
+    }
+
+    public void BackButtonDown()//もどるボタンを押した際
+    {
+        gameManager.SoundSE("ButtonDownSE"); //効果音
+
+        //パネルについて
+        pausePanel.SetActive(true);
+        settingPanel.SetActive(false);
+        tutorialPanel.SetActive(false);
+
+        //ボタン
+        //true（表示）
         resumeButton.gameObject.SetActive(true);
         quitButton.gameObject.SetActive(true);
         settingButton.gameObject.SetActive(true);
         tutorialButton.gameObject.SetActive(true);
+
+        //false（非表示）
+        backButton.gameObject.SetActive(false);
+        vibrationButton.gameObject.SetActive(false);
+        soundButton.gameObject.SetActive(false);
     }
 
-    public void SoundButtonDown()
+    public void SoundButtonDown()//サウンドボタンを押した際
     {
 
     }
 
-    public void VibrationButtonDown()
+    public void VibrationButtonDown()//振動設定ボタンを押した際
     {
 
     }
