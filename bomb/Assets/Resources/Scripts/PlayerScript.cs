@@ -9,11 +9,12 @@ public class PlayerScript : MonoBehaviour
     private Transform playerTransform;
     public float movementSpeed = 15.0f; // ˆÚ“®‘¬“x
     private int bombCount = 0;
-    public GameObject BombPtrefab;
+    BombScript bombScript;
 
     void Start()
     {
         playerTransform = GetComponent<Transform>();
+        bombScript = FindObjectOfType<BombScript>();
         Invoke("StartGame", 3.0f);
     }
 
@@ -31,7 +32,7 @@ public class PlayerScript : MonoBehaviour
             //ƒ{ƒ€”­“®
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                CreateBomb();
+                bombScript.CreateBomb(playerTransform);
             }
         }
     }
@@ -46,13 +47,4 @@ public class PlayerScript : MonoBehaviour
         playerTransform.localPosition += transform.forward * movementSpeed * Time.deltaTime;
         transform.eulerAngles = new Vector3(0.0f, direction, 0.0f);
     }
-
-    private void CreateBomb()
-    {
-        Vector3 newPosition = transform.position + new Vector3(0.0f,1.0f,0.0f);
-        Instantiate(BombPtrefab, newPosition, Quaternion.identity);
-    }
-
-
-
 }
