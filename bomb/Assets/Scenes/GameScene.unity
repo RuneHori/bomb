@@ -3090,7 +3090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de6788b4b2b8f1d4c9588f05569e49c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BombPtrefab: {fileID: 8980208749051765543, guid: c44d403878925af4ea784c006c46e644, type: 3}
+  BombPtrefab: {fileID: 6540934173297006730, guid: 8baea5283736d9a49aaa77ece348e168, type: 3}
 --- !u!1 &2138673488
 GameObject:
   m_ObjectHideFlags: 0
