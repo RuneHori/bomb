@@ -10,7 +10,7 @@ public class PlayerScript : MonoBehaviour
     private Transform playerTransform;
     public float movementSpeed = 15.0f; // 移動速度
     private float originalSpeed; // 特殊効果を適用する前の速度
-    private int bombCount = 0;
+    //private int bombCount = 0;
     BombScript bombScript;
 
     public GameObject speedEffectPrefab; // speedUP効果のプレハブ
@@ -19,6 +19,10 @@ public class PlayerScript : MonoBehaviour
     {
         playerTransform = GetComponent<Transform>();
         bombScript = FindObjectOfType<BombScript>();
+        if (bombScript == null)
+        {
+            Debug.LogError("BombScript not found!");
+        }
         Invoke("StartGame", 3.0f);
     }
 
@@ -36,10 +40,10 @@ public class PlayerScript : MonoBehaviour
             //ボム発動
             if (bombScript != null && Input.GetKeyDown(KeyCode.Z))
             {
-                if (bombCount <= 1)
+                //if (bombCount <= 1)
                 {
                     bombScript.CreateBomb(playerTransform);
-                    bombCount++;
+                    // bombCount++;
                 }
             }
         }
