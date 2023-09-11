@@ -361,6 +361,7 @@
 "Assets/Resources/Scripts/BombScript.cs"
 "Assets/Resources/Scripts/ButtonScript.cs"
 "Assets/Resources/Scripts/GameManager.cs"
+"Assets/Resources/Scripts/GamepadExample.cs"
 "Assets/Resources/Scripts/GameSceneScript.cs"
 "Assets/Resources/Scripts/PlayerScript.cs"
 "Assets/Resources/Scripts/SceneChangeScript.cs"
